@@ -26,10 +26,10 @@ class FileUploader extends Component
 
         foreach ($this->photos as $photo) {
             //$photo->storePublicly('photos', 's3');
-			$photo->storePublicly('photos');
+            $photo->storePublicly('photos');
         }
         $this->photos = [];
-        session()->flash('message', 'File Uploaded !');
+        session()->flash('message', 'File Uploaded Successfully!');
     }
 
     public function remove($index)
