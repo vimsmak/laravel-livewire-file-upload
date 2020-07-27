@@ -1,9 +1,9 @@
 <div class="w-1/2 my-10">
     @error('photos') <span class="error">{{ $message }}</span> @enderror
-
-
+    
     <!-- <div wire:loading wire:target="photo">Uploading...</div>
     <div wire:loading wire:target="save">Storing to S3...</div> -->
+
     @if (session()->has('message'))
     <div class="p-2 bg-green-800 text-white my-10 rounded shadow">
         {{ session('message') }}
@@ -23,6 +23,7 @@
             <progress max="100" x-bind:value="progress"></progress>
         </div>
     </div>
+    
     @if ($photos)
     @foreach($photos as $photo)
     <div class="p-4 my-3 rounded-lg shadow-lg transition-all duration-500"
