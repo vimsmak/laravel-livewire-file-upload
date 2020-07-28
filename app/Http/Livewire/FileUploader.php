@@ -11,13 +11,6 @@ class FileUploader extends Component
 
     public $photos = [];
 
-    // public function updatedPhoto()
-    // {
-    //     $this->validate([
-    //         'photo' => 'image|max:10240', // 1MB Max
-    //     ]);
-    // }
-
     public function save()
     {
         $this->validate([
